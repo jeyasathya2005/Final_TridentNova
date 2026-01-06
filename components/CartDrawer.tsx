@@ -38,7 +38,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cart, onRemove
               <p className="text-[10px] font-black uppercase tracking-widest text-blue-600 mt-1">{cart.length} items selected</p>
             </div>
             <button onClick={onClose} className="w-10 h-10 flex items-center justify-center hover:bg-gray-200 rounded-full transition-colors" aria-label="Close cart">
-              <i className="fas fa-times text-xl"></i>
+              <i className="fas fa-times text-xl text-gray-900"></i>
             </button>
           </div>
 
@@ -106,7 +106,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cart, onRemove
               
               <button 
                 onClick={onClose}
-                className="w-full py-4 text-gray-500 font-black text-[10px] uppercase tracking-widest hover:text-gray-900 transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 border-2 border-gray-900 text-gray-900 font-black text-[10px] uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all rounded-2xl flex items-center justify-center gap-2"
               >
                 <i className="fas fa-arrow-left text-[8px]"></i> Continue Shopping
               </button>

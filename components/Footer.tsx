@@ -29,9 +29,22 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, onShowInfo, categories }) =
              <span className="text-[9px] sm:text-[10px] font-black font-montserrat tracking-[0.3em] uppercase text-white/70">TRIDENT NOVA</span>
           </div>
           
-          <p className="text-gray-400 leading-relaxed mb-6 sm:mb-8 text-xs sm:text-sm">
-            Curating the finest tech and luxury essentials since 2024. Experience the intersection of innovation and high-fashion.
-          </p>
+          <div className="space-y-4 text-gray-400 text-xs sm:text-sm leading-relaxed mb-8">
+            <p>Curating the finest tech and luxury essentials since 2024.</p>
+            <div className="pt-4 border-t border-white/5 space-y-2">
+              <p className="text-white font-black uppercase tracking-widest text-[9px]">The Boutique</p>
+              <address className="not-italic text-gray-400 space-y-1">
+                <p>Trident Nova,</p>
+                <p>Rajaji Road, Sivagiri,</p>
+                <p>Tenkasi - <span className="font-mono">627757</span></p>
+                <p className="pt-2 flex items-center gap-2 text-white font-bold">
+                  <i className="fas fa-phone-alt text-[10px] text-blue-500"></i>
+                  +91 78719 47562
+                </p>
+              </address>
+            </div>
+          </div>
+          
           <div className="flex gap-4">
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition-all border border-white/10 group">
               <i className="fab fa-instagram text-lg sm:text-xl group-hover:scale-110 transition-transform"></i>
@@ -74,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, onShowInfo, categories }) =
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[8px] sm:text-[10px] text-gray-500 font-black uppercase tracking-[0.2em]">
-         <p className="text-center">© 2024 Trident Nova. All Rights Reserved.</p>
+         <p className="text-center">© 2024 Trident Nova. Sivagiri, Tenkasi.</p>
          <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
             <button onClick={() => onShowInfo('privacy')} className="hover:text-white transition-colors">Privacy</button>
             <button onClick={() => onShowInfo('terms')} className="hover:text-white transition-colors">Terms</button>

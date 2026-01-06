@@ -204,8 +204,13 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           <div className="mt-auto pt-8 border-t border-white/10">
-            <p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-4">Contact Support</p>
-            <a href="https://wa.me/917871947562" className="flex items-center gap-3 text-white text-sm font-bold">
+            <p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-4">Visit Our Boutique</p>
+            <address className="not-italic text-white/70 text-[11px] mb-6 leading-relaxed">
+              Trident Nova,<br />
+              Rajaji Road, Sivagiri,<br />
+              Tenkasi - 627757
+            </address>
+            <a href="https://wa.me/917871947562" className="flex items-center gap-3 text-white text-sm font-bold hover:text-blue-400 transition-colors">
               <i className="fab fa-whatsapp text-green-500 text-lg"></i>
               +91 78719 47562
             </a>
