@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
 import { Product, CategoryItem } from '../types';
 import ProductCard from './ProductCard';
@@ -55,7 +54,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
   return (
     <div>
       {showFilters && (
-        <div className="mb-16 flex flex-col md:flex-row gap-6 items-center justify-between">
+        <div className="mb-8 sm:mb-16 flex flex-col md:flex-row gap-4 sm:gap-6 items-center justify-between">
           <div className="relative w-full md:max-w-xl">
             <i className="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
             <input 
@@ -67,11 +66,11 @@ const ProductGrid: React.FC<ProductGridProps> = ({
             />
           </div>
           
-          <div className="flex gap-4 w-full md:w-auto">
+          <div className="flex flex-wrap md:flex-nowrap gap-3 sm:gap-4 w-full md:w-auto">
             <select 
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="flex-1 md:w-56 px-6 py-4 bg-white rounded-2xl border border-gray-100 font-bold text-xs uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="flex-1 md:w-56 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl border border-gray-100 font-bold text-[10px] sm:text-xs uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
             >
               <option value="all">All Items</option>
               {categories.map(cat => (
@@ -81,7 +80,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
             <select 
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="flex-1 md:w-56 px-6 py-4 bg-white rounded-2xl border border-gray-100 font-bold text-xs uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="flex-1 md:w-56 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl border border-gray-100 font-bold text-[10px] sm:text-xs uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
             >
               <option value="newest">Newest First</option>
               <option value="price-low">Price: Low to High</option>
@@ -92,7 +91,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
       )}
 
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {filteredProducts.map(p => (
             <ProductCard 
               key={p.id} 
@@ -104,9 +103,9 @@ const ProductGrid: React.FC<ProductGridProps> = ({
           ))}
         </div>
       ) : (
-        <div className="text-center py-32 bg-white rounded-[3rem] border border-dashed border-gray-200">
-           <i className="fas fa-search text-5xl text-gray-200 mb-6"></i>
-           <h3 className="text-2xl font-black font-montserrat tracking-tight mb-2">No results</h3>
+        <div className="text-center py-24 sm:py-32 bg-white rounded-[2rem] sm:rounded-[3rem] border border-dashed border-gray-200">
+           <i className="fas fa-search text-4xl sm:text-5xl text-gray-200 mb-6"></i>
+           <h3 className="text-xl sm:text-2xl font-black font-montserrat tracking-tight mb-2">No results</h3>
            <p className="text-gray-400 font-light">Try adjusting your filters.</p>
         </div>
       )}
